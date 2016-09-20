@@ -1,5 +1,7 @@
 # COUNTDOWM CLOCK
 
+![img](https://github.com/mrtial/countdown_clock/blob/master/clock_img.png)
+
 ### TIME
 
 The total coding time is approximately 50 mins. It took a about 15 mins to setup the basic countdown function. But I forgot to adjust local timezone at first, and I also added 'adjust singular' function to the unit when the number is "01" or "00". The rest of time I spent in styling the clock.
