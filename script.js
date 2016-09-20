@@ -12,6 +12,13 @@
 	var timerID = window.setInterval(function(){
 		var current = new Date();
 		var remainTime = target - current + localTimeOffSet*1000*60;
+
+		// clear timer and show alert
+		if(remainTime===0){
+			window.clearInterval(timerID);
+			window.alert("HAPPY NEW YEAR!!!")
+		}
+
 		var clock = formatTime(remainTime);
 
 		// adjust Singular
@@ -27,7 +34,6 @@
 				$displayUnit[i].innerHTML = units[i];
 			}
 		}
-
 	},1000)
 
 	// format
