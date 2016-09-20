@@ -1,7 +1,8 @@
 (function(){
 
 	// store the DOM query, so don't have to do it over and over
-	var $displayTime = document.getElementById('displayTime');
+	var $displayTime = document.getElementsByClassName("time");
+	var $displayUnit = document.getElementsByClassName("unit");
 
 	// set target time & get local timezone offset
 	var target = new Date('2017-01-01');
@@ -11,8 +12,19 @@
 	var timerID = window.setInterval(function(){
 		var current = new Date();
 		var remainTime = target - current + localTimeOffSet*1000*60;
-		$displayTime.innerHTML = formatTime(remainTime);
-		
+		var clock = formatTime(remainTime);
+
+		// adjust Singular
+		var unit = ["DAY","HOUR","MINUTE","SECOND"];
+
+		for(var i=0;i<4;i++){
+			$displayTime[i].innerHTML = clock[i];
+
+			if(+clock[i]<2){
+				$displayUnit[i].innerHTML = unit[i];
+			}
+		}
+
 	},1000)
 
 	// format
@@ -28,7 +40,6 @@
 	  seconds = (seconds < 10) ? "0" + seconds : seconds;
 
 	  return [days,hours,minutes,seconds]
-
 	}
 
 })()
