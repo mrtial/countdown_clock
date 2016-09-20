@@ -3,22 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Countdown Clock</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,300,600" rel="stylesheet">
+
 </head>
 <body>
-	<div id="displayTime">
-		<div class="time"></div>
-		<div class="unit">DAYS</div>
-
-		<div class="time"></div>
-		<div class="unit">HOURS</div>
-
-		<div class="time"></div>
-		<div class="unit">MINUTES</div>
-
-		<div class="time"></div>
-		<div class="unit">SECONDS</div>
-
+	<div class="clock">
+		<h1>COUNTDOWN</h1>
+		<div id="displayTime">
+			<div class="box">
+				<div class="time">&nbsp</div>
+				<div class="unit">DAYS</div>
+			</div>
+			<div class="box">
+				<div class="time">&nbsp</div>
+				<div class="unit">HOURS</div>
+			</div>
+			<div class="box">
+				<div class="time">&nbsp</div>
+				<div class="unit">MINUTES</div>
+			</div>
+			<div class="box second">
+				<div class="time">&nbsp</div>
+				<div class="unit">SECONDS</div>
+			</div>
+		</div>
 	</div>
+	
 
 	<script type="text/javascript" src="script.js"></script>
 </body>

@@ -16,12 +16,15 @@
 
 		// adjust Singular
 		var unit = ["DAY","HOUR","MINUTE","SECOND"];
+		var units = ["DAYS","HOURS","MINUTES","SECONDS"];
 
 		for(var i=0;i<4;i++){
 			$displayTime[i].innerHTML = clock[i];
 
 			if(+clock[i]<2){
 				$displayUnit[i].innerHTML = unit[i];
+			} else{
+				$displayUnit[i].innerHTML = units[i];
 			}
 		}
 
